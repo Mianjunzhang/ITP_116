@@ -19,12 +19,12 @@ def open_file() -> IO:
     # Prompt the user to enters the filename
     file_name = input("Enter a filename: ")
     # Initialize the file pointer data set
-    file_pointer = None
+    pointer = None
     # Checking if the input filename can be referenced
-    while file_pointer is None:
+    while pointer is None:
         try:
             # Try to open the file with input filename
-            file_pointer = open(file_name, "r")
+            pointer = open(file_name, "r")
         # Inform the user the input is not valid filename
         except IOError:
             # Alert the user
@@ -32,7 +32,7 @@ def open_file() -> IO:
             # Re-enter the filename
             file_name = input("Enter a filename: ")
     # Return the file data
-    return file_pointer
+    return pointer
 
 
 # The function to read the file
